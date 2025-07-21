@@ -143,7 +143,13 @@ hr {border-top: 1px solid #3a3a3a;
     align-items: center;
     justify-content: center;
 }
-
+/* Meetup Times Section */
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /*   Handles responsivity without the need for a media query */
+    display: flex;
+    flex-wrap: wrap;
+}   
 
 /* Hero section */
 #hero {
@@ -226,14 +232,63 @@ hr {border-top: 1px solid #3a3a3a;
         right: 50px
     }
 
+    /* Reasons section */
+    #benefits-pyshical,
+    #benefits-mental {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+
+    #benefits-pyshical > div,
+    #benefits-mental > div { 
+        width: 75%;
+
+    }
+    #benefits-mental > div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 
 }
+
+
 
 @media  screen and (min-width: 992px) {
     #menu  a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
     
+    @media screen and(min-width: 1200px){
+        /* Reasons Sections */
+        #benefits {
+            display:flex
+            flex-directions: row;
+        }
+
+        #benefits > div {
+            flex: 1;
+        }
+
+        #benefits-image {
+            order: 0;
+    }
+
+        #benefits-mental { order: 1;
+    }
+
+        #benefts-mental > div {
+            align-self:flex-start;
+        }
+
+        #benefits-physical > div {
+            align-self: flex-end;
+        }
+
+
 }   
     
 
